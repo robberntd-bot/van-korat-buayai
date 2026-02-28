@@ -3,11 +3,25 @@
 <html lang="th">
 <head>
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา</title>
+<meta name="description" content="รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา ตารางเวลา อัปเดตล่าสุด">
+<meta name="keywords" content="รถตู้โคราชบัวใหญ่, ตารางรถตู้, พรทวีชัยราชสีมา">
+<meta name="author" content="บริษัท พรทวีชัยราชสีมา จำกัด">
+
+<title>ตารางเวลา | รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา</title>
+
 <link rel="stylesheet" href="css/style.css">
+
+<!-- ฟอนต์แนว Tech อนาคต -->
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- เส้นกราฟิกโลหะด้านบน -->
+<div class="metal-bar"></div>
+
+<!-- เอฟเฟกต์ particle -->
+<canvas id="particle-canvas"></canvas>
 
 <!-- เมนูสามขีด -->
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
@@ -29,7 +43,7 @@
 <section class="card">
   <h2>ข้อมูลเส้นทาง</h2>
   <p>เส้นทาง: โคราช - บัวใหญ่</p>
-  <p>ผ่าน: โนนตาเถร - สีดา</p>
+  <p>ผ่าน: แยกโนนตาเถร - เลี้ยวเข้าบัวใหญ่ที่แยกสีดา</p>
   <p>จำนวนที่นั่ง: 13 ที่นั่ง</p>
   <p>ราคา: 90 บาท ตลอดสาย</p>
 </section>
@@ -37,13 +51,30 @@
 <!-- แผนที่ (คุณใส่ src เอง) -->
 <section class="card">
   <h2>แผนที่จุดขึ้นรถโคราช</h2>
-  <iframe src="" class="map-frame"></iframe>
+  <!-- แผนที่จุดขึ้นรถโคราช -->
+<iframe 
+  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d240.89159460400623!2d102.0926013674591!3d14.977959200000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sth!2sth!4v1772269405250!5m2!1sth!2sth"
+  class="map-frame"
+  allowfullscreen=""
+  loading="lazy"
+  referrerpolicy="no-referrer-when-downgrade">
+</iframe>
+</section>
+<!-- ปุ่มเปิด Google Maps เต็มหน้า -->
+<section class="card" style="text-align:center;">
+  <a href="https://maps.app.goo.gl/Swk2ESrtnR5efYGh8" target="_blank" class="btn">
+    เปิดใน Google Maps
+  </a>
 </section>
 
 <!-- ปุ่มจุดขึ้นรถบัวใหญ่ -->
 <section class="card">
-  <a href="#" target="_blank" class="btn">ดูจุดขึ้นรถบัวใหญ่ (Google Maps)</a>
+  <a href="buayai-map.html" class="btn">
+ดูจุดขึ้นรถที่บัวใหญ่ (Google Maps)
+</a>
 </section>
+
+
 
 <!-- บอลลูนลอยแชท -->
 <a href="https://www.facebook.com/profile.php?id=61578095641989" target="_blank" class="chat-float">
@@ -51,5 +82,6 @@
 </a>
 
 <script src="js/script.js"></script>
+<script src="js/particle.js"></script>
 </body>
 </html>
