@@ -161,6 +161,7 @@ tr:nth-child(even) td {
 /* ================= NOTICE ================= */
 .notice {
   text-align: center;
+  font-size: 28px;       /* ทำให้ใหญ่ */
   font-weight: bold;
   margin: 40px 20px;
   padding: 20px;
@@ -174,9 +175,11 @@ tr:nth-child(even) td {
 
 .update-time {
   text-align: center;
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 40px;
+  font-size: 28px;       /* ทำให้ใหญ่ */
+  font-weight: bold;
+  margin: 30px 0;
+  color: #ffffff;
+  text-shadow: 0 0 20px rgba(0,200,255,1);
 }
 
 /* ================= MAP ================= */

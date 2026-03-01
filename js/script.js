@@ -43,3 +43,27 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+/* =============================
+   แสดงวันที่วันนี้อัตโนมัติ
+   (ใช้เฉพาะหน้าที่มี id="lastUpdate")
+============================= */
+
+function formatThaiDate(date) {
+  const months = [
+    "มกราคม","กุมภาพันธ์","มีนาคม","เมษายน","พฤษภาคม","มิถุนายน",
+    "กรกฎาคม","สิงหาคม","กันยายน","ตุลาคม","พฤศจิกายน","ธันวาคม"
+  ];
+
+  const day = date.getDate();
+  const month = months[date.getMonth()];
+  const year = date.getFullYear() + 543;
+
+  return `${day} ${month} ${year}`;
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const updateElement = document.getElementById("lastUpdate");
+  if (updateElement) {
+    updateElement.textContent = formatThaiDate(new Date());
+  }
+});
