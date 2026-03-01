@@ -1,6 +1,45 @@
+/* ===================================================
+   VAN KORAT - BUAYAI
+   Stable Menu System (Production Final)
+=================================================== */
 
-// ควบคุมเมนูสามขีด
-function toggleMenu() {
+document.addEventListener("DOMContentLoaded", function () {
+
   const menu = document.getElementById("sideMenu");
-  menu.style.right = menu.style.right === "0px" ? "-250px" : "0px";
-}
+  const toggleBtn = document.querySelector(".menu-toggle");
+
+  // ถ้าไม่มีเมนูในหน้านั้น ไม่ต้องทำงาน
+  if (!menu || !toggleBtn) return;
+
+  /* =============================
+     เปิด / ปิด เมนูเมื่อกดสามขีด
+  ============================= */
+  toggleBtn.addEventListener("click", function (e) {
+    e.stopPropagation();
+    menu.classList.toggle("active");
+  });
+
+  /* =============================
+     กดพื้นที่ว่างแล้วปิดเมนู
+  ============================= */
+  document.addEventListener("click", function (e) {
+    if (
+      menu.classList.contains("active") &&
+      !menu.contains(e.target) &&
+      !toggleBtn.contains(e.target)
+    ) {
+      menu.classList.remove("active");
+    }
+  });
+
+  /* =============================
+     กดลิงก์ในเมนูแล้วปิด (มือถือ)
+  ============================= */
+  const menuLinks = menu.querySelectorAll("a");
+  menuLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      menu.classList.remove("active");
+    });
+  });
+
+});

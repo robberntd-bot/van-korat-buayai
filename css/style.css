@@ -1,41 +1,76 @@
-/* ===== พื้นหลังหลักเมทัลลิค ===== */
-/* พื้นหลังหลักของเว็บไซต์ */
+/* ===================================================
+   VAN KORAT - BUAYAI
+   Clean Stable Version (No Overlap)
+=================================================== */
+
+/* ================= BODY ================= */
 body {
   margin: 0;
   font-family: 'Orbitron', sans-serif;
-
-  /* ใส่รูปพื้นหลัง */
   background: url("../images/01.jpg") no-repeat center center fixed;
-
-  /* ทำให้เต็มจอ */
   background-size: cover;
-
-  /* ทำให้สีดูเข้มขึ้นเล็กน้อย */
   background-color: #000;
+  color: #ffffff;
+  overflow-x: hidden;
 }
 
-/* ===== ส่วนหัวเว็บ (Hero) ===== */
-.hero {
-  position: relative;
-  padding: 80px 20px;
-  text-align: center;
-
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
+/* เลเยอร์มืดจาง ๆ ทับพื้นหลัง */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 20, 0.55);
+  pointer-events: none;
+  z-index: -1;
 }
-/* ===== กล่องเนื้อหา ===== */
+
+/* ================= เส้นโลหะบนสุด ================= */
+.metal-bar {
+  height: 6px;
+  background: linear-gradient(90deg, #b0c4de, #00ccff, #b0c4de);
+  box-shadow: 0 0 20px rgba(0,200,255,0.9);
+}
+
+/* ================= HERO ================= */
 .hero {
   position: relative;
   padding: 100px 20px;
   text-align: center;
-
-  background: transparent;   /* เอากล่องดำออก */
-  border: none;              /* เอาขอบออก */
-  box-shadow: none;          /* เอาเงาออก */
+  background: transparent;
 }
 
-/* ===== เมนูสามขีด ===== */
+.hero h1 {
+  font-size: 38px;
+  letter-spacing: 2px;
+  text-shadow: 0 0 20px rgba(0,200,255,1);
+}
+
+.hero p {
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+/* ================= CARD ================= */
+.card {
+  background: linear-gradient(145deg, #2e3e50, #1b2735);
+  border: 3px solid black;
+  border-radius: 10px;
+  padding: 25px;
+  margin: 25px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0,150,255,0.5);
+}
+
+.card h2 {
+  text-align: center;
+  text-shadow: 0 0 10px rgba(0,200,255,0.8);
+}
+
+/* ================= MENU ================= */
 .menu-toggle {
   position: fixed;
   top: 15px;
@@ -45,7 +80,6 @@ body {
   z-index: 1000;
 }
 
-/* ===== เมนูด้านข้าง ===== */
 .side-menu {
   position: fixed;
   top: 0;
@@ -55,14 +89,18 @@ body {
   background: linear-gradient(180deg, #0f2027, #203a43);
   border-left: 3px solid black;
   padding-top: 80px;
-  transition: 0.4s;
+  transition: right 0.3s ease;
   z-index: 999;
+}
+
+.side-menu.active {
+  right: 0;
 }
 
 .side-menu a {
   display: block;
   padding: 15px;
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
@@ -71,12 +109,12 @@ body {
   background: rgba(0,150,255,0.3);
 }
 
-/* ===== ปุ่มหลัก ===== */
+/* ================= BUTTON ================= */
 .btn {
   display: inline-block;
   padding: 12px 22px;
-  background: linear-gradient(145deg, #b0c4de, #afb6be);
-  color: black;
+  background: linear-gradient(145deg, #b0c4de, #5f9ea0);
+  color: #000;
   border: 3px solid black;
   border-radius: 8px;
   text-decoration: none;
@@ -89,21 +127,22 @@ body {
   transform: scale(1.05);
 }
 
-/* ===== ตารางเวลา ===== */
+/* ================= TABLE ================= */
 table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 15px;
 }
 
-th {
-  background: linear-gradient(145deg, #708090, #b0c4de);
-  color: black;
-  border: 2px solid black;
+table th {
+  background: #000;
+  color: #00ccff;
+  border: 2px solid #00ccff;
   padding: 12px;
+  text-shadow: 0 0 10px rgba(0,200,255,0.8);
 }
 
-td {
+table td {
   background: rgba(255,255,255,0.1);
   border: 2px solid black;
   padding: 10px;
@@ -113,8 +152,13 @@ tr:nth-child(even) td {
   background: rgba(255,255,255,0.05);
 }
 
+/* จัดคอลัมน์เวลาให้อยู่กลาง */
+#table-korat td:first-child,
+#table-buayai td:first-child {
+  text-align: center;
+}
 
-/* ===== ข้อความเตือน ===== */
+/* ================= NOTICE ================= */
 .notice {
   text-align: center;
   font-weight: bold;
@@ -128,28 +172,29 @@ tr:nth-child(even) td {
   box-shadow: 0 0 15px rgba(255,204,0,0.4);
 }
 
+.update-time {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
+  margin-bottom: 40px;
+}
 
-/* ===== แผนที่ ===== */
+/* ================= MAP ================= */
 .map-frame {
   width: 100%;
   height: 400px;
   border: 3px solid black;
   border-radius: 12px;
   box-shadow: 0 0 25px rgba(0,200,255,0.6);
-  transition: 0.3s;
 }
 
-.map-frame:hover {
-  box-shadow: 0 0 40px rgba(0,200,255,1);
-}
-
-/* ===== บอลลูนลอยแชท ===== */
+/* ================= CHAT FLOAT ================= */
 .chat-float {
   position: fixed;
   bottom: 25px;
   right: 25px;
   background: linear-gradient(145deg, #d0e7ff, #5f9ea0);
-  color: black;
+  color: #000;
   padding: 16px 26px;
   border-radius: 40px;
   border: 3px solid black;
@@ -165,128 +210,24 @@ tr:nth-child(even) td {
   box-shadow: 0 0 40px rgba(0,200,255,1);
 }
 
-/* เอฟเฟกต์เด้ง */
 @keyframes float {
   0% { transform: translateY(0px); }
   50% { transform: translateY(-6px); }
   100% { transform: translateY(0px); }
 }
 
-/* ===== Responsive มือถือ ===== */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 24px; }
-  .card { margin: 15px; padding: 18px; }
-}
-/* ===== Ultra Cinematic Theme ===== */
-
-/* ใช้ฟอนต์ Tech */
-body {
-  font-family: 'Orbitron', sans-serif;
-  overflow-x: hidden;
-}
-
-/* เส้นโลหะคาดบน */
-.metal-bar {
-  height: 6px;
-  background: linear-gradient(90deg, #b0c4de, #00ccff, #b0c4de);
-  box-shadow: 0 0 20px rgba(0,200,255,0.9);
-}
-
-/* Hero Cinematic */
-.hero {
-  position: relative;
-  padding: 120px 20px;
-  text-align: center;
-  background: radial-gradient(circle at center, #1b2735, #090a0f);
-  overflow: hidden;
-}
-
-.hero h1 {
-  font-size: 40px;
-  letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(0,200,255,1);
-}
-
-/* เอฟเฟกต์สแกนไลน์ */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 200%;
-  background: linear-gradient(
-    rgba(255,255,255,0.05) 50%,
-    transparent 50%
-  );
-  background-size: 100% 4px;
-  animation: scan 6s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes scan {
-  from { transform: translateY(0); }
-  to { transform: translateY(100px); }
-}
-
-/* Particle Canvas */
+/* ================= PARTICLE CANVAS ================= */
 #particle-canvas {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
 }
 
-/* ปุ่ม glow เพิ่ม */
-.btn {
-  box-shadow: 0 0 15px rgba(0,200,255,0.6);
-}
-
-/* เมนูดูหรูขึ้น */
-.side-menu {
-  backdrop-filter: blur(8px);
-}
-/* เลเยอร์มืดทับพื้นหลัง */
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 20, 0.65);
-  z-index: -1;
-}
-/* บังคับตัวอักษรหลักให้เป็นสีขาว */
-body, h1, h2, h3, h4, p, td, th, a {
-  color: #ffffff;
-}
-/* ทำให้ตัวหนังสือมีเงาอ่านง่าย */
-h1, h2, h3 {
-  text-shadow: 0 0 10px rgba(0, 200, 255, 0.8);
-}
-
-p {
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
-}
-.update-time {
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.7;
-  margin-bottom: 40px;
-}
-/* จัดหัวข้อในตารางให้อยู่กลาง */
-.card h2 {
-  text-align: center;
-}
-/* หัวตารางสไตล์ล้ำ */
-table th {
-  background: #000;
-  color: #00ccff;
-  border: 2px solid #00ccff;
-  text-shadow: 0 0 10px rgba(0,200,255,0.8);
-}
-/* จัดตัวเลขในคอลัมน์เวลาให้อยู่กลาง */
-#table-korat td:first-child,
-#table-buayai td:first-child {
-  text-align: center;
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 24px; }
+  .card { margin: 15px; padding: 18px; }
 }
