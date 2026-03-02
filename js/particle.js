@@ -11,8 +11,8 @@ for (let i = 0; i < 80; i++) {
   particles.push({
     x: Math.random() * canvas.width,
     y: Math.random() * canvas.height,
-    size: Math.random() * 2,
-    speed: Math.random() * 0.5
+    size: Math.random() * 4,
+    speed: Math.random() * 3
   });
 }
 
