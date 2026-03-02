@@ -10,7 +10,6 @@ fetch('data/news.json')
     card.className = "card";
     card.innerHTML = `
       <h3>${news.title}</h3>
-      <p>${news.date}</p>
       <p>${news.description}</p>
     `;
     container.appendChild(card);
