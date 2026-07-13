@@ -1,6 +1,6 @@
 
 // โหลดข้อมูลตารางจาก JSON
-fetch('data/3schedule.json')
+fetch('data/schedule.json')
 .then(res => res.json())
 .then(data => {
   renderTable('table-korat', data.korat);
