@@ -42,6 +42,11 @@
     <p>บริษัท พรทวีชัยราชสีมา จำกัด</p>
     <img src="images/logo.png" alt="Porntaweechai Logo" class="hero-logo">
     <p>⚠️เวบไซต์นี้จัดทำขึ้นส่วนตัว<br>เพื่อแจ้งข้อมูลข่าวสารเท่านั้น</p>
+    
+    <!-- ตัวนับผู้เข้าชม -->
+    <p class="visitor-count" style="margin-top: 15px; font-size: 16px; color: #00ccff; text-shadow: 0 0 10px rgba(0,200,255,0.8);">
+      ผู้เข้าชมทั้งหมด: <span id="visitor-count">กำลังโหลด...</span> คน
+    </p>
   </div>
     <!-- ปุ่ม?? -->
 <section class="card center">
@@ -141,7 +146,7 @@ runTransaction(counterRef, (current) => {
 onValue(counterRef, (snapshot) => {
   const value = snapshot.val() || 0;
   const el = document.getElementById("visitor-count");
-  if (el) el.innerText = value;
+  if (el) el.innerText = value.toLocaleString("th-TH");
 });
 </script>
 
