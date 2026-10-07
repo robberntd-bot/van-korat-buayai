@@ -1,64 +1,64 @@
-
 <!DOCTYPE html>
 <html lang="th">
 <head>
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา ตารางเวลา อัปเดตล่าสุด">
-<meta name="keywords" content="รถตู้โคราชบัวใหญ่, ตารางรถตู้, พรทวีชัยราชสีมา">
-<meta name="author" content="บริษัท พรทวีชัยราชสีมา จำกัด">
-
-<title>ตารางเวลา | รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา</title>
-
+<meta name="robots" content="index, follow">
+<meta name="description" content="ตารางรถตู้พรทวีชัย โคราช-บัวใหญ่ และ บัวใหญ่-โคราช ราคา 110 บาท ชื่อบัตรแล้วมารอก่อนเวลา 30 นาที">
+<meta name="keywords" content="ตารางรถตู้โคราช บัวใหญ่, ตารางรถตู้บัวใหญ่ โคราช, รถตู้พรทวีชัย">
+<link rel="canonical" href="https://robberntd-bot.github.io/van-korat-buayai/schedule.html">
+<meta property="og:title" content="ตารางรถตู้ โคราช - บัวใหญ่ | พรทวีชัย">
+<meta property="og:description" content="ตารางเวลารถตู้พรทวีชัย โคราชไปบัวใหญ่ และ บัวใหญ่ไปโคราช">
+<meta property="og:url" content="https://robberntd-bot.github.io/van-korat-buayai/schedule.html">
+<meta property="og:image" content="https://robberntd-bot.github.io/van-korat-buayai/images/logo.png">
+<title>ตารางรถตู้ โคราช - บัวใหญ่ | พรทวีชัยราชสีมา</title>
 <link rel="stylesheet" href="css/style.css">
-
-<!-- ฟอนต์แนว Tech อนาคต -->
-
 </head>
 <body>
-
-<!-- เมนูสามขีด -->
 <div class="menu-toggle" onclick="toggleMenu()">☰</div>
-
 <nav id="sideMenu" class="side-menu">
   <a href="index.html">หน้าแรก</a>
   <a href="schedule.html">ตารางเวลา</a>
   <a href="news.html">ข่าวสาร</a>
 </nav>
-<!-- แสดงวันที่อัปเดต -->
-<p class="update-time">
-  อัปเดตล่าสุด: <span id="lastUpdate"></span>
-</p>
+<header class="hero">
+  <h1>ตารางรถตู้ โคราช - บัวใหญ่</h1>
+  <p>บริษัท พรทวีชัยราชสีมา จำกัด ราคา 110 บาท ทั้งสาย</p>
+</header>
+<p class="update-time">อัปเดตล่าสุด: <span id="lastUpdate"></span></p>
 <p class="notice">ทุกๆวันศุกร์เวลาอาจจะไม่ตรงที่ระบุไว้</p>
-<!-- ตารางเวลา โคราช -> บัวใหญ่ -->
 <section class="card">
   <h2>โคราช → บัวใหญ่</h2>
-  <table id="table-korat"></table>
+  <table id="table-korat">
+    <tr><th>เวลา</th><th>หมายเหตุ</th></tr>
+    <tr><td>08:00</td><td>รอบนี้รถอาจจะมาไม่ตรงเวลา ขึ้นอยู่กับการจราจรในขณะนั้น</td></tr>
+    <tr><td>09:00</td><td></td></tr>
+    <tr><td>11:00</td><td></td></tr>
+    <tr><td>12:30</td><td></td></tr>
+    <tr><td>14:00</td><td></td></tr>
+    <tr><td>15:30</td><td></td></tr>
+    <tr><td>17:00</td><td></td></tr>
+    <tr><td></td><td>ช่วงเทศกาลหรือวันหยุดยาวกรุณาสอบถามเวลาจากเจ้าหน้าที่ก่อนเดินทาง</td></tr>
+  </table>
 </section>
-
-<!-- ตารางเวลา บัวใหญ่ -> โคราช -->
 <section class="card">
   <h2>บัวใหญ่ → โคราช</h2>
-  <table id="table-buayai"></table>
+  <table id="table-buayai">
+    <tr><th>เวลา</th><th>หมายเหตุ</th></tr>
+    <tr><td>06:00</td><td></td></tr>
+    <tr><td>07:00</td><td></td></tr>
+    <tr><td>08:00</td><td></td></tr>
+    <tr><td>10:00</td><td></td></tr>
+    <tr><td>11:00</td><td></td></tr>
+    <tr><td>13:00</td><td></td></tr>
+    <tr><td>15:00</td><td></td></tr>
+  </table>
 </section>
-
-
-<!-- ข้อความเตือน -->
-<p class="notice">
-⚠️ เวลาอาจมีการเปลี่ยนแปลง<br>โดยไม่ได้แจ้งล่วงหน้า<br>ซื้อบัตรแล้วกรุณามารอก่อนเวลารถออก30นาที
-</p>
-  <!-- ปุ่ม?? -->
+<p class="notice">⚠️ เวลาอาจมีการเปลี่ยนแปลง<br>โดยไม่ได้แจ้งล่วงหน้า<br>ซื้อบัตรแล้วกรุณามารอก่อนเวลารถออก30นาที</p>
 <section class="card center">
-  <a href="index.html" class="btn">
-    กลับไปหน้าแรก
-  </a>
+  <a href="index.html" class="btn">กลับไปหน้าแรก</a>
 </section>
-<!-- บอลลูนลอยแชท -->
-<a href="https://www.facebook.com/profile.php?id=61578095641989" target="_blank" class="chat-float">
-  facebook
-</a>
-
+<a href="https://www.facebook.com/profile.php?id=61578095641989" target="_blank" rel="noopener" class="chat-float">facebook</a>
 <script src="js/script.js"></script>
 <script src="js/schedule.js"></script>
 </body>

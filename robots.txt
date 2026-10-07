@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://robberntd-bot.github.io/van-korat-buayai/sitemap.xml
