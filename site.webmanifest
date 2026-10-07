@@ -1,0 +1,23 @@
+{
+  "name": "รถตู้พรทวีชัย โคราช-บัวใหญ่",
+  "short_name": "รถตู้โคราชบัวใหญ่",
+  "icons": [
+    {
+      "src": "favicon-48.png",
+      "sizes": "48x48",
+      "type": "image/png"
+    },
+    {
+      "src": "apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png"
+    },
+    {
+      "src": "images/logo.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./",
+  "display": "standalone"
+}
