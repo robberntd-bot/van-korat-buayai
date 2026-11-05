@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="index, follow">
+<meta name="description" content="คำถามที่พบบ่อย รถตู้พรทวีชัย โคราช-บัวใหญ่ จอดรับกลางทาง รับฝากของ จองล่วงหน้า เวลาเดินทาง ราคา">
+<meta name="keywords" content="คำถามที่พบบ่อย รถตู้โคราช บัวใหญ่, FAQ รถตู้พรทวีชัย, จอดรับกลางทาง, รับฝากของ">
+<link rel="icon" href="favicon-48.png" type="image/png" sizes="48x48">
+<link rel="icon" href="favicon.svg" type="image/svg+xml" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="canonical" href="https://robberntd-bot.github.io/van-korat-buayai/faq.html">
+<meta property="og:title" content="คำถามที่พบบ่อย | รถตู้ โคราช - บัวใหญ่ พรทวีชัย">
+<meta property="og:description" content="คำถามที่พบบ่อยเกี่ยวกับรถตู้พรทวีชัย โคราช-บัวใหญ่">
+<meta property="og:url" content="https://robberntd-bot.github.io/van-korat-buayai/faq.html">
+<meta property="og:image" content="https://robberntd-bot.github.io/van-korat-buayai/images/logo.png">
+<title>คำถามที่พบบ่อย | รถตู้ โคราช - บัวใหญ่ พรทวีชัยราชสีมา</title>
+<link rel="stylesheet" href="css/style.css">
+<style>
+.faq-item {
+  margin-bottom: 15px;
+  border: 2px solid #00ccff;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(0,0,0,0.4);
+}
+.faq-question {
+  background: linear-gradient(145deg, #1b2735, #2e3e50);
+  color: #00ccff;
+  padding: 18px 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-shadow: 0 0 8px rgba(0,200,255,0.6);
+  user-select: none;
+}
+.faq-question:hover {
+  background: linear-gradient(145deg, #2e3e50, #1b2735);
+}
+.faq-answer {
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, padding 0.4s ease;
+  background: rgba(20,30,40,0.7);
+  color: #fff;
+  line-height: 1.7;
+}
+.faq-item.active .faq-answer {
+  max-height: 500px;
+  padding: 18px 20px;
+}
+.faq-icon {
+  font-size: 22px;
+  transition: transform 0.3s;
+}
+.faq-item.active .faq-icon {
+  transform: rotate(45deg);
+}
+.center {
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<div class="menu-toggle" onclick="toggleMenu()">Menu</div>
+<nav id="sideMenu" class="side-menu">
+  <a href="index.html">หน้าแรก</a>
+  <a href="schedule.html">ตารางเวลา</a>
+  <a href="faq.html">คำถามที่พบบ่อย</a>
+</nav>
+<header class="hero">
+  <h1>คำถามที่พบบ่อย</h1>
+  <p>รถตู้พรทวีชัย โคราช - บัวใหญ่</p>
+</header>
+
+<section class="card">
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      จอดรับกลางทางไหม? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>รับเฉพาะจุด สีดา / โนนตาเถร / โนนสูง</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      การรับฝากของ <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>การรับฝากของคิดเป็นน้ำหนักแต่ละชิ้น ค่าส่งขั้นต่ำเริ่มต้นที่ 80 บาทและขยับขึ้นเรื่อย ๆ ตามน้ำหนัก</p>
+      <p>บริษัทจะไม่รับส่งของที่ส่งกลิ่นแรง หรือของที่มีความเปียกแฉะ</p>
+      <p>ขนาดพัสดุที่รับคือต้องมีด้านนึงที่กว้างไม่เกิน 13 นิ้ว</p>
+      <p>การรับส่งของต้องเข้าไปส่งที่จุดจำหน่ายตั๋ว</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      มีเบอร์โทรไหม? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>ไม่มีเบอร์โทร สามารถติดต่อได้ช่องทาง Facebook โดยพิมพ์ค้นหาว่า <strong>รถตู้โคราชบัวใหญ่พรทวีชัย</strong></p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      จองล่วงหน้าได้ไหม? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>ไม่สามารถจองล่วงหน้าได้ เนื่องจากรอบรถอาจมีการเปลี่ยนแปลงทุก 10 นาที</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      เด็กและผู้ใหญ่ราคาเท่ากันไหม? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>ราคาเท่ากัน คิดเป็นที่นั่งละ 110 บาทตลอดสาย</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      รถหมดกี่โมง? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>เส้นทางจากโคราชไปบัวใหญ่ เริ่ม 8 โมงเช้าและจะหมดที่ 17:00 น.</p>
+      <p>เส้นทางจากบัวใหญ่มาโคราชจะเริ่มที่ 6 โมงเช้าและหมด 15:00 น.</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      ใช้เวลาเดินทางกี่ชั่วโมง? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>โดยปกติจะใช้เวลา 1 ชั่วโมง 30 นาทีถึง 2 ชั่วโมง แล้วแต่การจราจร</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      รถออกตรงเวลาไหม? <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>รถจะออกไม่ตรงเวลา อาจช้ากว่าหรือเร็วกว่าที่แจ้งไว้</p>
+      <p>ขอให้ผู้โดยสารเตรียมตัวรออย่างน้อยครึ่งชั่วโมงก่อนถึงเวลารถออก</p>
+    </div>
+  </div>
+
+  <div class="faq-item">
+    <div class="faq-question" onclick="toggleFaq(this)">
+      กรณีตั๋วโดยสารสูญหาย <span class="faq-icon">+</span>
+    </div>
+    <div class="faq-answer">
+      <p>ในกรณีที่ตั๋วสูญหายจำเป็นต้องซื้อใหม่</p>
+      <p>กรุณาเก็บรักษาตั๋วโดยสารของท่าน สำหรับการตรวจเช็คระหว่างทาง</p>
+    </div>
+  </div>
+</section>
+
+<section class="card center">
+  <a href="index.html" class="btn">กลับไปหน้าแรก</a>
+</section>
+
+<script src="js/script.js"></script>
+<script>
+function toggleFaq(element) {
+  const item = element.parentElement;
+  item.classList.toggle('active');
+}
+</script>
+</body>
+</html>
