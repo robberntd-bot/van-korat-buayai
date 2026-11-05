@@ -28,6 +28,34 @@
 <meta name="twitter:image" content="https://robberntd-bot.github.io/van-korat-buayai/images/logo.png">
 <title>รถตู้ โคราช - บัวใหญ่ | ตารางเวลา ราคา 110 บาท พรทวีชัย</title>
 <link rel="stylesheet" href="css/style.css">
+<style>
+.big-btn {
+  display: block;
+  width: fit-content;
+  margin: 15px auto;
+  padding: 18px 36px;
+  font-size: 22px;
+  font-weight: bold;
+  text-align: center;
+  background: linear-gradient(145deg, #b0c4de, #5f9ea0);
+  color: #000;
+  border: 3px solid black;
+  border-radius: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 20px rgba(0,200,255,0.6);
+  transition: 0.3s;
+}
+.big-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(0,200,255,0.9);
+}
+@media (max-width: 768px) {
+  .big-btn {
+    font-size: 18px;
+    padding: 16px 28px;
+  }
+}
+</style>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -72,11 +100,9 @@
     </p>
   </div>
 </header>
-<section class="card center">
-  <a href="faq.html" class="btn">คำถามที่พบบ่อย</a>
-</section>
-<section class="card center">
-  <a href="schedule.html" class="btn">กดดูตารางเวลา</a>
+<section class="card center" style="text-align: center; padding: 30px 20px;">
+  <a href="faq.html" class="big-btn">กรุณากดอ่านคำถามที่พบบ่อย</a>
+  <a href="schedule.html" class="big-btn">กดดูตารางเวลา</a>
 </section>
 <section class="card">
   <h2>ข้อมูลเส้นทาง</h2>
