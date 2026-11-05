@@ -76,13 +76,15 @@ body::before {
   position: fixed;
   top: 15px;
   right: 20px;
-  font-size: 22px;
+  font-size: 18px;
+  font-weight: bold;
   cursor: pointer;
   z-index: 1000;
 
-  /* ทำให้ดูเป็นปุ่ม */
-  width: 40px;
-  height: 40px;
+  /* ทำให้ดูเป็นปุ่ม - ขยายขนาดกรอบให้พอดีกับตัวอักษร */
+  min-width: 70px;
+  height: 48px;
+  padding: 0 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -221,18 +223,15 @@ tr:nth-child(even) td {
   z-index: -1;
 }
 
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .hero h1 { font-size: 24px; }
-  .card { margin: 15px; padding: 18px; }
 /* ================= HERO LOGO ================= */
 .hero-logo {
-  width: 220px;          /* ปรับขนาดตรงนี้ */
+  width: 220px;
   max-width: 100%;
   height: auto;
   margin-bottom: 20px;
   filter: drop-shadow(0 0 15px rgba(0,200,255,0.8));
 }
+
 .menu-toggle:hover {
   transform: scale(1.1);
   box-shadow: 0 0 25px rgba(0,200,255,1);
@@ -240,4 +239,15 @@ tr:nth-child(even) td {
 .menu-toggle:active {
   transform: scale(0.95);
 }
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 24px; }
+  .card { margin: 15px; padding: 18px; }
+  .menu-toggle {
+    min-width: 64px;
+    height: 46px;
+    font-size: 16px;
+    padding: 0 10px;
+  }
 }
