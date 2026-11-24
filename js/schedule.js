@@ -1,5 +1,5 @@
 // โหลดข้อมูลตารางจาก JSON
-fetch('data/4schedule.json')
+fetch('data/3schedule.json')
   .then(res => {
     if (!res.ok) throw new Error('ไม่พบข้อมูล');
     return res.json();
